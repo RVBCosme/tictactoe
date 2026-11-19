@@ -1,4 +1,4 @@
-﻿# Araw vs Ulan · Tic-Tac-Toe
+# Araw vs Ulan · Tic-Tac-Toe
 
 A two-player Tic-Tac-Toe game where the sun (☀️ **Araw**) takes on the rain (🌧️ **Ulan**). *Araw* and *ulan* are the Filipino words for sun and rain.
 
