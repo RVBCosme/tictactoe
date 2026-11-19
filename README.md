@@ -4,6 +4,8 @@ A two-player Tic-Tac-Toe game where the sun (☀️ **Araw**) takes on the rain 
 
 **Live app:** https://araw-vs-ulan-tictactoe.vercel.app
 
+**Demo video (43 s):** https://araw-vs-ulan-tictactoe.vercel.app/demo.mp4 (turns, a win for each player, a draw, New Game and Reset Scores)
+
 ## What it does
 
 - Two players take turns on a 3×3 board, Araw (☀️) and Ulan (🌧️).
