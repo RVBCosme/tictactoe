@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Araw vs Ulan · Tic-Tac-Toe
 
-## Getting Started
+A two-player Tic-Tac-Toe game where the sun (☀️ **Araw**) takes on the rain (🌧️ **Ulan**). *Araw* and *ulan* are the Filipino words for sun and rain.
 
-First, run the development server:
+**Live app:** https://araw-vs-ulan-tictactoe.vercel.app
+
+## What it does
+
+- Two players take turns on a 3×3 board, Araw (☀️) and Ulan (🌧️).
+- The game announces the winner, highlights the winning line, or calls a draw.
+- **New Game** clears the board. The first move switches to the other player every new game, so neither side keeps the first-move edge.
+- **Scoreboard** counts Araw wins, Ulan wins and draws. **Reset Scores** sets it back to zero.
+- Moves on a taken cell or after the game is over are ignored.
+- Works on phones and desktops, with keyboard focus styles, screen-reader labels for every cell, and a live status message. The mark animation turns off for people who prefer reduced motion.
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) and React 19
+- TypeScript
+- Tailwind CSS 4
+- Vitest for the game-logic tests
+- Deployed on Vercel
+
+## Project layout
+
+- `src/lib/game.ts`: the game rules as pure functions (winner and draw detection, move validation).
+- `src/lib/game.test.ts`: unit tests for every winning line, draws, a win on the last move, and blocked moves.
+- `src/components/TicTacToe.tsx`: the board, status, scoreboard and buttons (a Client Component).
+- `src/app/page.tsx`: the page layout.
+
+## Run it locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm test         # game-logic unit tests
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Built with AI
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Built with the help of an AI coding assistant (Claude Code). The game rules live in plain functions covered by unit tests, and I checked the result by playing it in the browser: a win, a draw, New Game, Reset Scores, and the phone layout.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+By Rene Vincent Cosme · [Portfolio](https://renevincentcosme.vercel.app) · [GitHub](https://github.com/RVBCosme)
